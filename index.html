@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web APIs Code Quiz</title>
+    <link rel="stylesheet" href="./assets/css/style.css"/>
+</head>
+<body>
+    <header>
+        <div id="scoreTrack">
+            <input type="button" value="View High Scores" onclick="viewHighScores()">
+            <br>
+             <span id="score"></span>
+        </div>
+        <div id="countDownTimer" >
+            Time: <span id="timer"></span>
+        </div>
+    </header>
+
+    <section>
+        <div id=homeContainer class="startPage">
+        <h1 id="startTitle"> Coding Quiz Challenge</h1>
+        <p id="startParagraph">Try to answer the following code-related questions within the time limit.<br>
+        Keep in mind that the incorrect answers will penalize your time by ten seconds!</p>
+        <button id="startBtn">Start Quiz</button>
+        </div>
+    </section>
+
+    <section>
+    <div id="quizContainer" style="display: none">
+    <h2 id="questionText"></h2>
+    <ul>
+        <div>
+            <button id="choiceA"></button>
+        </div>
+        <br>
+        <div>
+            <button id="choiceB"></button>
+        </div>
+        <br>
+        <div>
+            <button id="choiceC"></button>
+        </div>
+        <br>
+        <div>
+            <button id="choiceD"></button>
+        </div>
+    </ul>
+    </div>
+</section>
+
+<section id="userResponse"></section>
+
+<div id="endGame" style="display: none">
+<h2> Game Over </h2>
+Your Score: <span id="finalScore"></span>
+</br>
+Enter Initials: <input type="text" value="" id="initials">
+</br>
+<input type="button" value="submit" onclick="submitScore()">
+</div>
+
+<div id="highScoresPage" style="display: none">
+    <h2> Leaderboard</h2>
+    <br>
+    <p> Initials and Score:</p>
+    <br>
+    <ul id="highScores"></ul>
+    <br>
+    <input type="button" value="Go Back" onclick="goHome()">
+    <input type="button" id="clearHighscores" value ="Clear" onclick="clearScores()">
+</div>
+</body> 
+        <script src="script.js"></script>
+     
+</html>
